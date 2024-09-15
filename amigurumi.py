@@ -141,37 +141,37 @@ root = tk.Tk()
 root.title("Cadastro de Produtos - Amigurumi")
 
 # Labels e Entradas de Texto
-tk.Label(root, text="Nome").grid(row=0, column=1)
+tk.Label(root, text="Nome").grid(row=0, column=0, padx=0, pady=5, sticky='e')
 entry_nome = tk.Entry(root)
-entry_nome.grid(row=0, column=2)
+entry_nome.grid(row=0, column=1, padx=0, pady=5, sticky='w')
 
-tk.Label(root, text="Descrição").grid(row=1, column=1)
+tk.Label(root, text="Descrição").grid(row=1, column=0, padx=0, pady=5, sticky='e')
 entry_descricao = tk.Entry(root)
-entry_descricao.grid(row=1, column=2)
+entry_descricao.grid(row=1, column=1, padx=0, pady=5, sticky='w')
 
-tk.Label(root, text="Preço").grid(row=2, column=1)
+tk.Label(root, text="Preço").grid(row=2, column=0, padx=0, pady=5, sticky='e')
 entry_preco = tk.Entry(root)
-entry_preco.grid(row=2, column=2)
+entry_preco.grid(row=2, column=1, padx=0, pady=5, sticky='w')
 
-tk.Label(root, text="Quantidade").grid(row=3, column=1)
+tk.Label(root, text="Quantidade").grid(row=3, column=0, padx=0, pady=5, sticky='e')
 entry_quantidade = tk.Entry(root)
-entry_quantidade.grid(row=3, column=2)
+entry_quantidade.grid(row=3, column=1, padx=0, pady=5, sticky='w')
 
 # Botões CRUD
 btn_incluir = tk.Button(root, text="Incluir", command=incluir_produto)
-btn_incluir.grid(row=0, column=0, padx=10, pady=5)
+btn_incluir.grid(row=0, column=2, padx=10, pady=5)
 
 btn_excluir = tk.Button(root, text="Excluir", command=excluir_produto)
-btn_excluir.grid(row=1, column=0, padx=10, pady=5)
+btn_excluir.grid(row=1, column=2, padx=10, pady=5)
 
 btn_alterar = tk.Button(root, text="Alterar", command=alterar_produto)
-btn_alterar.grid(row=2, column=0, padx=10, pady=5)
+btn_alterar.grid(row=2, column=2, padx=10, pady=5)
 
 btn_buscar = tk.Button(root, text="Buscar", command=buscar_produto)
-btn_buscar.grid(row=3, column=0, padx=10, pady=5)
+btn_buscar.grid(row=3, column=2, padx=10, pady=5)
 
 btn_recarregar = tk.Button(root, text="Recarregar", command=carregar_produtos)
-btn_recarregar.grid(row=4, column=0, padx=10, pady=5)
+btn_recarregar.grid(row=4, column=2, padx=10, pady=5)
 
 # Lista de Produtos
 lista_produtos = ttk.Treeview(root, columns=("id", "nome", "preco", "quantidade"), show="headings")
